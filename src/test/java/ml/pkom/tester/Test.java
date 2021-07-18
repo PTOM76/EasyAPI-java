@@ -11,7 +11,7 @@ public class Test {
         jsonConfig.set("hoge.bool", true);
         jsonConfig.set("str.ja.aiueo", "あいうえお");
         jsonConfig.set("str.ja.kakikukeko", "かきくけこ");
-        jsonConfig.save("test.json");
+        jsonConfig.save("test/test.json");
 
         YamlConfig yamlConfig = new YamlConfig();
         yamlConfig.set("hoge.str", "hoge");
@@ -19,6 +19,6 @@ public class Test {
         yamlConfig.set("hoge.bool", true);
         yamlConfig.set("str.ja\\.aiueo", "あいうえお");
         yamlConfig.set("str.ja\\.kakikukeko", "かきくけこ");
-        yamlConfig.save("test.yml");
+        yamlConfig.save("test/test.yml");
     }
 }

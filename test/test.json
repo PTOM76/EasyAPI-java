@@ -5,7 +5,8 @@
     "bool": true
   },
   "str": {
-    "ja.aiueo": "あいうえお",
-    "ja.kakikukeko": "かきくけこ"
+    "ja": {
+      "kakikukeko": "かきくけこ"
+    }
   }
 }
