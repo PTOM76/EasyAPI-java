@@ -1,0 +1,8 @@
+hoge:
+  str: hoge
+  int: 1
+  bool: true
+str:
+  ja.aiueo: あいうえお
+  ja.kakikukeko: かきくけこ
+

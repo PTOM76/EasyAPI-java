@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "ml.pkom.tester.Test",
+            "projectName": "EasyAPI"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "ml.tester.Test",
+            "projectName": "EasyAPI"
+        },
+        {
+            "type": "java",
             "name": "Launch Sample",
             "request": "launch",
             "mainClass": "ml.pkom.easyapi.Sample",
