@@ -15,7 +15,7 @@ public class FileControll {
     
     public static boolean fileWriteContents(String pathName, String contents){ return fileWriteContents(new File(pathName), contents); }
 
-    public static String readWriteContents(String pathName) { return fileReadContents(new File(pathName)); }
+    public static String fileReadContents(String pathName) { return fileReadContents(new File(pathName)); }
 
     public static boolean fileCopy(String inPathName, String outPathName) { return fileCopy(new File(inPathName), new File(outPathName)); }
 
