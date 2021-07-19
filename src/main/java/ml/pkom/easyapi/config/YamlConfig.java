@@ -24,6 +24,10 @@ public class YamlConfig extends Config {
         super();
     }
 
+    public YamlConfig(Config config) {
+        super(config);
+    }
+
     private FlowStyle style = FlowStyle.BLOCK;
 
     public void setStyle(FlowStyle flowStyle) {
@@ -44,6 +48,16 @@ public class YamlConfig extends Config {
 
     public boolean save(File file, boolean pretty) {
         try {
+            String configData = this.toYaml(file, pretty);
+            FileControll.fileWriteContents(file, configData);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String toYaml(File file, boolean pretty) {
+        try {
             DumperOptions options = new DumperOptions();
             options.setDefaultFlowStyle(style);
             if (pretty) {
@@ -51,10 +65,9 @@ public class YamlConfig extends Config {
             }
             Yaml yaml = new Yaml(options);
             String configData = yaml.dump(configMap);
-            FileControll.fileWriteContents(file, configData);
-            return true;
+            return configData;
         } catch (Exception e) {
-            return false;
+            return null;
         }
     }
 }

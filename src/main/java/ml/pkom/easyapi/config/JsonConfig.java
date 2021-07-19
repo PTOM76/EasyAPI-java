@@ -23,6 +23,10 @@ public class JsonConfig extends Config {
         super();
     }
 
+    public JsonConfig(Config config) {
+        super(config);
+    }
+
     public boolean load(File file) {
         try {
             String configData = FileControll.fileReadContents(file);
@@ -38,15 +42,24 @@ public class JsonConfig extends Config {
 
     public boolean save(File file, boolean pretty) {
         try {
+            String configData = this.toJson(file, pretty);
+            FileControll.fileWriteContents(file, configData);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String toJson(File file, boolean pretty) {
+        try {
             Gson gson = new Gson();
             if (pretty) {
                 gson = new GsonBuilder().setPrettyPrinting().create();
             }
             String configData = gson.toJson(configMap);
-            FileControll.fileWriteContents(file, configData);
-            return true;
+            return configData;
         } catch (Exception e) {
-            return false;
+            return null;
         }
     }
 }

@@ -17,6 +17,10 @@ public class Config implements IConfig {
 
     public Config() {};
 
+    public Config(Config config) {
+        configMap = config.configMap;
+    };
+
     @SuppressWarnings("unchecked")
     public Object get(String key) {
         try {
@@ -79,8 +83,10 @@ public class Config implements IConfig {
                     continue;
                 }
                 Map<String, Object> beforeInMap = inMap;
-                if (configMap.containsKey(k)) {
+                if (configMap.containsKey(k) && i == 1) {
                     inMap = (LinkedHashMap<String, Object>) configMap.get(k);
+                }else if (beforeInMap.containsKey(k)){
+                    inMap = (LinkedHashMap<String, Object>) beforeInMap.get(k);
                 }else {
                     inMap = new LinkedHashMap<String, Object>();
                 }
