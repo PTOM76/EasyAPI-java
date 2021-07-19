@@ -1,0 +1,1 @@
+"./maven/bin/mvn.cmd" javadoc:javadoc

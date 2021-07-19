@@ -1,0 +1,65 @@
+@options
+@argfile
+-classpath
+'C:/Users/ptms7/.m2/repository/com/google/code/gson/gson/2.8.7/gson-2.8.7.jar;C:/Users/ptms7/.m2/repository/org/yaml/snakeyaml/1.29/snakeyaml-1.29.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'D:/workspace/EasyAPI/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/workspace/EasyAPI/target/site/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'EasyAPI 1.0.1 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'D:/workspace/EasyAPI/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'EasyAPI 1.0.1 API'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/config/Config.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/config/IConfig.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/config/JsonConfig.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/config/package-info.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/config/YamlConfig.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/CUrl.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/File.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/FileControll.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/Hex.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/HexConvert.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/package-info.java'
+'D:/workspace/EasyAPI/src/main/java/ml/pkom/easyapi/ResourceControll.java'
+C:\Users\ptms7\.m2\repository\com\google\code\gson\gson\2.8.7\gson-2.8.7.jar = 1626352241191
+C:\Users\ptms7\.m2\repository\org\yaml\snakeyaml\1.29\snakeyaml-1.29.jar = 1626352287744
+D:\workspace\EasyAPI\src\main\java = 1625270683215
+D:\workspace\EasyAPI\target\site\apidocs\allclasses-index.html = 1626676539788
+D:\workspace\EasyAPI\target\site\apidocs\allclasses.html = 1626676539852
+D:\workspace\EasyAPI\target\site\apidocs\allpackages-index.html = 1626676539809
+D:\workspace\EasyAPI\target\site\apidocs\constant-values.html = 1626676539179
+D:\workspace\EasyAPI\target\site\apidocs\deprecated-list.html = 1626676539828
+D:\workspace\EasyAPI\target\site\apidocs\element-list = 1626676539035
+D:\workspace\EasyAPI\target\site\apidocs\help-doc.html = 1626676539913
+D:\workspace\EasyAPI\target\site\apidocs\index-all.html = 1626676539765
+D:\workspace\EasyAPI\target\site\apidocs\index.html = 1626676539870
+D:\workspace\EasyAPI\target\site\apidocs\member-search-index.js = 1626676539731
+D:\workspace\EasyAPI\target\site\apidocs\member-search-index.zip = 1626676539748
+D:\workspace\EasyAPI\target\site\apidocs\overview-summary.html = 1626676539894
+D:\workspace\EasyAPI\target\site\apidocs\overview-tree.html = 1626676539531
+D:\workspace\EasyAPI\target\site\apidocs\package-search-index.js = 1626676539593
+D:\workspace\EasyAPI\target\site\apidocs\package-search-index.zip = 1626676539627
+D:\workspace\EasyAPI\target\site\apidocs\script.js = 1626676539942
+D:\workspace\EasyAPI\target\site\apidocs\search.js = 1626676539959
+D:\workspace\EasyAPI\target\site\apidocs\serialized-form.html = 1626676539212
+D:\workspace\EasyAPI\target\site\apidocs\stylesheet.css = 1626676539929
+D:\workspace\EasyAPI\target\site\apidocs\type-search-index.js = 1626676539660
+D:\workspace\EasyAPI\target\site\apidocs\type-search-index.zip = 1626676539698
