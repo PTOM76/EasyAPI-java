@@ -11,10 +11,18 @@ import com.google.gson.reflect.TypeToken;
 import ml.pkom.easyapi.FileControll;
 
 public class JsonConfig extends Config {
+    /**
+     * 
+     * @param file ファイル
+     */
     public JsonConfig(File file) {
         super(file);
     }
 
+    /**
+     * 
+     * @param file ファイル名
+     */
     public JsonConfig(String file) {
         super(file);
     }
@@ -23,10 +31,21 @@ public class JsonConfig extends Config {
         super();
     }
 
+    /**
+     * Config→JsonConfigへ変換
+     * 
+     * @param config Config
+     */
     public JsonConfig(Config config) {
         super(config);
     }
 
+    /**
+     * Jsonファイルを読み込んでMapへ変換
+     * 
+     * @param file ファイル
+     * @return 成功→true / 失敗→false
+     */
     public boolean load(File file) {
         try {
             String configData = FileControll.fileReadContents(file);
@@ -40,9 +59,16 @@ public class JsonConfig extends Config {
         }
     }
 
+    /**
+     * MapをJsonへ変換し、Jsonファイルとして保存
+     * 
+     * @param file   ファイル
+     * @param pretty 整形
+     * @return 成功→true / 失敗→false
+     */
     public boolean save(File file, boolean pretty) {
         try {
-            String configData = this.toJson(file, pretty);
+            String configData = this.toJson(pretty);
             FileControll.fileWriteContents(file, configData);
             return true;
         } catch (Exception e) {
@@ -50,7 +76,13 @@ public class JsonConfig extends Config {
         }
     }
 
-    public String toJson(File file, boolean pretty) {
+    /**
+     * MapをJsonへ変換 失敗した場合はnullを返す
+     * 
+     * @param pretty 整形
+     * @return Jsonの文字列
+     */
+    public String toJson(boolean pretty) {
         try {
             Gson gson = new Gson();
             if (pretty) {

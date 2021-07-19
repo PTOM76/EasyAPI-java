@@ -7,20 +7,42 @@ import java.io.File;
 public class Config implements IConfig {
     public Map<String, Object> configMap = new LinkedHashMap<>();
 
+    /**
+     * 任意ファイルを読み込み、Mapへ変換
+     * 
+     * @param file
+     */
     public Config(File file) {
         load(file);
     }
 
+    /**
+     * 任意ファイルを読み込み、Mapへ変換
+     * 
+     * @param file
+     */
     public Config(String file) {
         this(new File(file));
     }
 
     public Config() {};
 
+    /**
+     * Configの変換
+     * 
+     * @param config
+     */
     public Config(Config config) {
         configMap = config.configMap;
     };
 
+    /**
+     * マップのキーから値を取得
+     * "."でパスを区切る
+     * 
+     * @param key キー
+     * @return 取得した値
+     */
     @SuppressWarnings("unchecked")
     public Object get(String key) {
         try {
@@ -51,18 +73,48 @@ public class Config implements IConfig {
 
     }
 
+    /**
+     * マップのキーから値(文字列)を取得 
+     * "."でパスを区切る
+     * 
+     * @param key キー
+     * @return 取得した値
+     */
     public String getString(String key) {
         return (String) get(key);
     }
 
+    /**
+     * マップのキーから値(数値)を取得
+     * "."でパスを区切る
+     * 
+     * @param key キー
+     * @return 取得した値
+     */
     public int getInt(String key) {
         return (Integer) get(key);
     }
 
+    /**
+     * マップのキーから値(真偽値)を取得
+     * "."でパスを区切る
+     * 
+     * @param key キー
+     * @return 取得した値
+     */
     public boolean getBoolean(String key) {
         return (Boolean) get(key);
     }
 
+    /**
+     * マップのキーに値をセット
+     * "."でパスを区切る
+     * 失敗するとfalseを返す
+     * 
+     * @param key キー
+     * @param value 値
+     * @return 真偽値
+     */
     @SuppressWarnings("unchecked")
     public boolean set(String key, Object value) {
         try {
@@ -102,41 +154,98 @@ public class Config implements IConfig {
         }
     }
 
+    /**
+     * マップのキーに値(文字列)をセット
+     * "."でパスを区切る
+     * 失敗するとfalseを返す
+     * 
+     * @param key キー
+     * @param 値
+     * @return 真偽値
+     */
     public boolean setString(String key, String value) {
         return set(key, value);
     }
 
+    /**
+     * マップのキーに値(数値)をセット
+     * "."でパスを区切る
+     * 失敗するとfalseを返す
+     * 
+     * @param key キー
+     * @param 値
+     * @return 真偽値
+     */
     public boolean setInt(String key, int value) {
         return set(key, value);
     }
 
+    /**
+     * マップのキーに値(真偽値)をセット
+     * "."でパスを区切る
+     * 失敗するとfalseを返す
+     * 
+     * @param key キー
+     * @param 値
+     * @return 真偽値
+     */
     public boolean setBoolean(String key, boolean value) {
         return set(key, value);
     }
 
+    /**
+     * StringをFileにして読み込み、継承先で処理
+     * 
+     * @param file ファイル名
+     */
     public boolean load(String file) {
         return load(new File(file));
     }
 
+    /**
+     * この関数は継承先で定義
+     * 
+     * @param file ファイル
+     */
     public boolean load(File file) {
-        // この関数は継承先で定義
         return false;
     }
 
+    /**
+     * StringをFileにし、継承先で処理して保存
+     * 
+     * @param file ファイル名
+     */
     public boolean save(String file) {
         return save(new File(file));
     }
 
+    /**
+     * ファイルを継承先で処理して保存
+     * 
+     * @param file ファイル
+     */
     public boolean save(File file) {
         return save(file, true);
     }
 
+    /**
+     * ファイルを継承先で処理して保存
+     * 
+     * @param file ファイル名
+     * @param pretty 整形
+     */
     public boolean save(String file, boolean pretty) {
         return save(new File(file), pretty);
     }
 
+    /**
+     * この関数は継承先で定義
+     * 
+     * @param file ファイル
+     * @param pretty 整形
+     */
     public boolean save(File file, boolean pretty) {
-        // この関数は継承先で定義
         return false;
     }
 }
