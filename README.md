@@ -6,3 +6,5 @@
 - PHPにあるCurl風API(CUrl)
 - 簡単にファイルを操作するためのクラス(FileControll, ResourcesControll)
 - PHPの関数にあるhex2bin, bin2hex(HexConvert)
+## ドキュメント
+- [https://ptom76.pkom.ml/easyapi/index.html]
